@@ -39,7 +39,7 @@ stepsPerDay = with(activity, tapply(steps, date, sum))
 hist(stepsPerDay, main = "Number of steps per day", xlab = "Days", breaks = 10)
 ```
 
-![](PA1_template_files/figure-html/The histogram-1.png)<!-- -->
+![](PA1_template_files/figure-html/The-histogram-1.png)<!-- -->
 
 - The summary function was then used on the "stepsPerDay" variable, and we can see that both the median and mean are equal to 10765 and 10766, which corresponds to the data seen in the histogram.
 
@@ -105,7 +105,7 @@ stepsmean = summarize(grouped, meansteps=mean(steps))
 plot(stepsmean$meansteps~stepsmean$interval, type = "l", xlab = "5-min intervals", ylab = "Mean steps across all days", main="Mean steps per 5-min interval across all days")
 ```
 
-![](PA1_template_files/figure-html/Plotting meansteps against interval-1.png)<!-- -->
+![](PA1_template_files/figure-html/Plotting-meansteps-against-interval-1.png)<!-- -->
 
 ## Imputing missing values
 
@@ -150,7 +150,7 @@ stepsPerDayImputed = with(imputedAct, tapply(steps, date, sum))
 hist(stepsPerDayImputed, main = "Number of steps per day", xlab = "Days", breaks = 10)
 ```
 
-![](PA1_template_files/figure-html/The histogram of the imputed data-1.png)<!-- -->
+![](PA1_template_files/figure-html/The-histogram-of-the-imputed-data-1.png)<!-- -->
 
 - And finally, recalculated the summary for the new array.
 

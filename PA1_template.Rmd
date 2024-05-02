@@ -33,7 +33,7 @@ stepsPerDay = with(activity, tapply(steps, date, sum))
 
 - A histogram was then created using this new variable with the number of breaks set to 10, and it seems to suggest that the highest frequency is around 11k to 12k steps per day.
 
-```{r The histogram}
+```{r The-histogram}
 hist(stepsPerDay, main = "Number of steps per day", xlab = "Days", breaks = 10)
 ```
 
@@ -67,7 +67,7 @@ stepsmean = summarize(grouped, meansteps=mean(steps))
 
 - Finally, I plotted the time series, and from it, we can see that the highest average number of steps, seem to belong to approximately the 850-min interval.
 
-```{r Plotting meansteps against interval}
+```{r Plotting-meansteps-against-interval}
 plot(stepsmean$meansteps~stepsmean$interval, type = "l", xlab = "5-min intervals", ylab = "Mean steps across all days", main="Mean steps per 5-min interval across all days")
 ```
 
@@ -103,7 +103,7 @@ stepsPerDayImputed = with(imputedAct, tapply(steps, date, sum))
 
 - Then created a new histogram for the new array.
 
-```{r The histogram of the imputed data}
+```{r The-histogram-of-the-imputed-data}
 hist(stepsPerDayImputed, main = "Number of steps per day", xlab = "Days", breaks = 10)
 ```
 
